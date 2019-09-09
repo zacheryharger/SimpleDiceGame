@@ -19,6 +19,9 @@ public void play() {
       System.out.println("The die is a " + dieNum);
    
       // write the rest of your code below
-        
+        if (enteredNum == dieNum) {
+        	System.out.println("You Win " + enteredBet + " dollars!");
+        	}
+        else System.out.println("Sorry, you lose!");
    }
 }
