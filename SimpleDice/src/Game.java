@@ -13,15 +13,25 @@ public void play() {
       System.out.print("What number do you choose ? ");
       int enteredNum = scnr.nextInt(); 
    
-      // generate the die roll 
-      Random randGen = new Random();
-      int dieNum  =  randGen.nextInt(6) + 1;
-      System.out.println("The die is a " + dieNum);
-   
+      // generate the die roll (Part 2)
+      Random randGen1 = new Random();
+      int dieNum1  =  randGen1.nextInt(6) + 1;
+      int dieNum2  =  randGen1.nextInt(6) + 1;
+      System.out.println("The first die is a " + dieNum1);
+      System.out.println("The second die is a " + dieNum2);
+      
       // write the rest of your code below
-        if (enteredNum == dieNum) {
+      if (dieNum1 == dieNum2) {
+    	  if (enteredNum == dieNum1) {
+    		  int luckyYou = enteredBet * 5;
+          	  System.out.println("You Win " + luckyYou + " dollars!");
+          	  }
+    	  else System.out.println("Sorry, you lose!");
+      }
+      else  if (enteredNum == dieNum1 || enteredNum == dieNum2) {
         	System.out.println("You Win " + enteredBet + " dollars!");
         	}
-        else System.out.println("Sorry, you lose!");
+        	else System.out.println("Sorry, you lose!");
+      
    }
 }
